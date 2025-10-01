@@ -1,0 +1,194 @@
+// Comments are designated by '//'
+
+// Variable Declarations:
+// var variable_name = value
+
+// Variable Types
+// General
+var_type variable = 0 // can be reassigned to a different type
+
+// Booleans
+bool boolean = true
+
+// Numbers
+int integer = 0 // Any integer value (32-bit, 4 bytes)
+float floating_point = 0.0f // Any decimal value (32-bit, 4 bytes)
+double double_precision_floating_point = 0.0f // Any decimal value (64-bit, 8 bytes)
+
+// Strings
+char character = "A" // (1 byte)
+str string = "Hello, World!" // (1 byte * (string length) + 1 byte (null char "\0"))
+
+// Arrays, Dictionaries, & Tables
+// Arrays
+arr_type arr[arr_length] = {
+    "String",
+    0123,
+    true
+}
+
+arr_type arr[] = { // Undefined array length
+    "String",
+    0123,
+    true
+}
+
+// Dictionaries
+dict_type dict[dict_length] = {
+    "key": value,
+    "another_key": another_value
+}
+
+dict_type dict[] = { // Undefined array length
+    "key": value,
+    "another_key": another_value
+}
+
+// Tables
+table_type table[table_length] = {
+    { // An array can be contained inside of a table
+        123,
+        "String",
+        true
+    },
+
+    array = { // An array can be contained inside of a table and be declared
+        123,
+        "String",
+        true
+    },
+
+    { // A dictionary can be contained inside of a table
+        "key": value
+    },
+
+    dictionary = { // A dictionary can be contained inside of a table and be declared
+        "key": value
+    },
+
+    123,
+    value = true,
+}
+
+table_type table[] = { // Table with undefined length
+    { // An array can be contained inside of a table
+        123,
+        "String",
+        true
+    },
+
+    array = { // An array can be contained inside of a table and be declared
+        123,
+        "String",
+        true
+    },
+
+    { // A dictionary can be contained inside of a table
+        "key": value
+    },
+
+    dictionary = { // A dictionary can be contained inside of a table and be declared
+        "key": value
+    },
+
+    123,
+    value = true,
+}
+
+// Conditional Statements, Loops, Logic, & Arithmetic
+if (conditional statement) then
+{
+    // do something
+}
+
+// Loops
+
+for int i = 0, 10, 1 do
+{
+    // do something iteratively
+}
+
+// Logic Operators
+// NOT operator
+if (!value) then {return}
+
+// AND operator
+if (value1 && value2) then {return}
+
+// NAND operator
+if (value1 !& value2) then {return}
+
+// OR operator
+if (value1 || value2) then {return}
+
+// NOR operator
+if (value1 !| value2) then {return}
+
+// XOR operator
+if (value1 >| value2) then {return}
+
+// XNOR operator
+if (value1 <| value2) then {return}
+
+// EQUALS operator
+if (value1 == value2) then {return}
+
+// NOT EQUALS operator
+if (value1 != value2) then {return}
+
+// Arithmetic
+// ADDITION
+int sum = 1 + 2
+
+// SUBTRACTION
+int difference = 2 - 1
+
+// MULTIPLICATION
+int product = 2 * 2
+
+// DIVISION
+float quotient = 1 / 2
+
+// MODULO (remainder)
+int remainder = 11 % 3 // returns 2, as 11 / 3 is 3 with remainder 2
+
+// Functions
+function function_name(args) : return_type // if no return_type, then function is void
+{
+    // do stuff
+}
+
+// Function calling
+function_name(args)
+
+// Example Function
+function add(int a, int b) : int
+{
+    return (a + b)
+}
+
+add(1, 2) // returns 3
+
+// Object-Oriented Programming (OOP)
+// Classes
+class ClassName // classes are private by default
+{
+    public:
+    {
+        var int = 0
+    }
+}
+
+class Thing extends ClassName // example of subclass
+{
+    public:
+    {
+        // already contains the "int" variable declared in ClassName
+    }
+}
+
+// Structures
+struct StructName // public by default
+{
+    var int = 0
+}
