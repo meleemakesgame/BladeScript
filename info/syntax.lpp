@@ -1,11 +1,17 @@
+// Lua++ syntax document
+
 // Comments are designated by '//'
+/[
+    Multiple Line comments are designated by '/[', and are ended with ']/'
+]/
 
 // Variable Declarations:
 // var variable_name = value
 
 // Variable Types
-// General
+/[ General
 var_type variable = 0 // can be reassigned to a different type
+]/
 
 // Booleans
 bool boolean = true
@@ -21,31 +27,31 @@ str string = "Hello, World!" // (1 byte * (string length) + 1 byte (null char "\
 
 // Arrays, Dictionaries, & Tables
 // Arrays
-arr_type arr[arr_length] = {
+arr[arr_length] = {
     "String",
     0123,
     true
 }
 
-arr_type arr[] = { // Undefined array length
+arr[] = { // Undefined array length
     "String",
     0123,
     true
 }
 
 // Dictionaries
-dict_type dict[dict_length] = {
+dict[dict_length] = {
     "key": value,
     "another_key": another_value
 }
 
-dict_type dict[] = { // Undefined array length
+dict[] = { // Undefined array length
     "key": value,
     "another_key": another_value
 }
 
 // Tables
-table_type table[table_length] = {
+table[table_length] = {
     { // An array can be contained inside of a table
         123,
         "String",
@@ -70,7 +76,7 @@ table_type table[table_length] = {
     value = true,
 }
 
-table_type table[] = { // Table with undefined length
+table[] = { // Table with undefined length
     { // An array can be contained inside of a table
         123,
         "String",
@@ -102,7 +108,6 @@ if (conditional statement) then
 }
 
 // Loops
-
 for int i = 0, 10, 1 do
 {
     // do something iteratively
