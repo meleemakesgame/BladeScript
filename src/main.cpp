@@ -3,6 +3,8 @@
 
 int main()
 {
-    std :: cout << "Hello, World!" << std :: endl;
+    std :: cout << "Running L++ Compiler" << std :: endl;
+    LuaPlusPlusFile file("../info/syntax.lpp");
+    file.CompileIntoCPP();
     return 0;
 }
