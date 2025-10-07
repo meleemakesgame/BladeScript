@@ -7,6 +7,7 @@ enum TokenType
     // Basic
     INDENTIFIER,
     ASSIGN,
+    NIL,
     // Modifiers
     CONST,
     LONG,
@@ -17,7 +18,7 @@ enum TokenType
     // Numbers
     INTEGER, FLOAT, DOUBLE,
     // Strings
-    STRING, CHARACTER, CONCATENATION,
+    STRING, CHARACTER,
 
     // Literals
     // Basic
@@ -30,14 +31,18 @@ enum TokenType
     STRING_LITERAL, CHARACTER_LITERAL,
 
     // Conditional Keywords
-    IF, THEN, ELSE, ELSEIF,
+    IF, THEN, ELSE, ELSEIF, RETURN,
     // Logic Keywords
     NOT_LOGIC, AND_LOGIC, NAND_LOGIC,
+    OR_LOGIC, NOR_LOGIC, XOR_LOGIC, XNOR_LOGIC,
+
     // Operators
     // Logical
-    EQUAL, NOT_EQUAL, GREATER_THAN, LESS_THAN, GREATER_EQUAL, LESS_EQUAL,
+    EQUALS, NOT_EQUALS, GREATER_THAN, LESS_THAN, GREATER_EQUALS, LESS_EQUALS,
     // Arithmetical
     ADD, SUBTRACT, MULTIPLY, DIVIDE, MODULO, EXPONENT,
+    // Strings
+    STRING_CONCATENATION, STRING_NEW_LN,
 
     // Loops
     FOR, WHILE, DO,
