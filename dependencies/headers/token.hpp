@@ -1,78 +1,37 @@
-#include <vector>
+#pragma once
+
 #include <string>
 
 enum TokenType
 {
-    // Variables
-    // Basic
-    INDENTIFIER,
-    ASSIGN,
-    // Modifiers
-    CONST,
-    LONG,
-    SIGNED,
-    UNSIGNED,
-    // Logic
-    BOOLEAN,
-    // Numbers
-    INTEGER, FLOAT, DOUBLE,
-    // Strings
-    STRING, CHARACTER,
+    KEYWORD,
+    IDENTIFIER,
 
-    // Literals
     // Basic
     NIL,
     // Logic
-    BOOLEAN_LITERAL,
+    BOOLEAN,
     // Numbers
-    INTEGER_LITERAL, FLOAT_LITERAL, DOUBLE_LITERAL,
+    NUMBER,
     // Strings
-    STRING_LITERAL, CHARACTER_LITERAL,
-
-    // Conditional Keywords
-    IF, THEN, ELSE, ELSEIF, RETURN,
-    // Logic Keywords
-    NOT_LOGIC, AND_LOGIC, NAND_LOGIC,
-    OR_LOGIC, NOR_LOGIC, XOR_LOGIC, XNOR_LOGIC,
+    STRING,
 
     // Operators
-    // Logical
-    EQUALS, NOT_EQUALS, GREATER_THAN, LESS_THAN, GREATER_EQUALS, LESS_EQUALS,
-    // Arithmetical
-    ADD, SUBTRACT, MULTIPLY, DIVIDE, MODULO, EXPONENT,
-    // Strings
-    STRING_CONCATENATION, STRING_NEW_LN,
-
-    // Functions
-    FUNCTION, FUNCTION_INDENTIFIER,
-
-    // Loops
-    FOR, WHILE, DO,
+    OPERATOR,
 
     // Punctuation
-    FORWARD_SLASH, BACKWARD_SLASH, PERIOD, 
-    COMMA, SEMICOLON, COLON, 
-    RPAREN, LPAREN, RBRACE, LBRACE, RCURLY, LCURLY, 
-    QUOTE_MARK, DOUBLE_QUOTE_MARK,
-    EXCLAIMATION_MARK, AT_SYMBOL, POUND_SYMBOL, AND_SYMBOL, ASTERISK_SYMBOL,
-    UNDERSCORE_SYMBOL, GRAVE_ACCENT_SYMBOL, TILDE_SYMBOL,
-
-    // Files & other stuff
-    INCLUDE,
-    DEFINE,
-
-    // Debug
-    PRINT, WARN, ERROR,
+    PUNCTUATION,
 
     // Special
-    EOF_TOKEN, ILLEGAL
+    EOF_TOKEN, ILLEGAL_CHARACTER
 };
 
 struct Token
 {
-    TokenType tokenType;
-    std::string lexeme;
+    TokenType tokenType;    // basic declaration (TokenType::NUMBER)
+    std::string lexeme;     // actual characters (123)
 
+    // debugging
     int line;
     int column;
 };
