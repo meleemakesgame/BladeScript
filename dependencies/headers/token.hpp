@@ -7,7 +7,6 @@ enum TokenType
     // Basic
     INDENTIFIER,
     ASSIGN,
-    NIL,
     // Modifiers
     CONST,
     LONG,
@@ -22,7 +21,7 @@ enum TokenType
 
     // Literals
     // Basic
-    INDENTIFIER_LITERAL,
+    NIL,
     // Logic
     BOOLEAN_LITERAL,
     // Numbers
@@ -43,6 +42,9 @@ enum TokenType
     ADD, SUBTRACT, MULTIPLY, DIVIDE, MODULO, EXPONENT,
     // Strings
     STRING_CONCATENATION, STRING_NEW_LN,
+
+    // Functions
+    FUNCTION, FUNCTION_INDENTIFIER,
 
     // Loops
     FOR, WHILE, DO,
