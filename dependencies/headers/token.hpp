@@ -6,6 +6,7 @@ enum TokenType
 {
     KEYWORD,
     IDENTIFIER,
+    COMMENT,
 
     // Basic
     NIL,
@@ -29,9 +30,11 @@ enum TokenType
 struct Token
 {
     TokenType tokenType;    // basic declaration (TokenType::NUMBER)
-    std::string lexeme;     // actual characters (123)
+    std::string lexeme;     // actual characters (123, int, str)
 
     // debugging
     int line;
     int column;
+
+    void DetectTokenTypeBasedOnLexeme();
 };

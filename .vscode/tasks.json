@@ -8,6 +8,8 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "C:\\Users\\Rdepa29\\OneDrive - MICDS\\CodeProjects\\C++\\VSCode\\Lua++\\dependencies\\functions\\compiler.cpp",
+                "C:\\Users\\Rdepa29\\OneDrive - MICDS\\CodeProjects\\C++\\VSCode\\Lua++\\dependencies\\functions\\token.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],

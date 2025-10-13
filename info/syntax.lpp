@@ -130,7 +130,7 @@ if (value1 || value2) then {return}
 if (value1 !| value2) then {return}
 
 // XOR operator
-if (value1 >| value2) then {return}
+if (value1 |> value2) then {return}
 
 // XNOR operator
 if (value1 <| value2) then {return}
